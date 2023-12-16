@@ -1,16 +1,22 @@
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBagShopping } from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { CartContext } from "../../context";
+
 
 const CartWidgetComponent = () => {
+
+    const { itemCount } = React.useContext(CartContext);
+
     const iconStyles = {
         fontSize: '25px',
         paddingRight: '5px'
     }
     return (
         <div>
-            <FontAwesomeIcon icon={faBagShopping} style={iconStyles} />
-            <span style={{fontSize: '18px'}} >6</span>
-        </div>
+      <FontAwesomeIcon style={iconStyles} icon={faCartShopping} />
+      <span style={{ fontSize: "1.3rem" }}>{itemCount}</span>
+    </div>
     )
 }
 

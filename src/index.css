@@ -1,3 +1,14 @@
 body {
     background-color: rgb(115, 166, 115);
 }
+
+.link {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+}
+
+#basic-nav-dropdown {
+    color: black;
+    padding-top: 10px;
+}
